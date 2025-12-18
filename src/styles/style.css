@@ -215,3 +215,11 @@ nav a:hover {
 .projects_page .projects_list ul a:hover {
     color: var(--transition_color);
 }
+
+.projects_page .projects_list ul li ul {
+    display: flex;
+    flex-direction: column;
+    list-style: inside;
+    gap: 1rem;
+    padding-top: 1rem;
+}
