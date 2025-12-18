@@ -1,0 +1,12 @@
+1. Add about me section
+2. Add projects
+3. Animations
+
+About me section:
+
+1. Title
+2. Picture
+3. Career/Job Title
+3. Passion/Goals
+4. Hobbies
+5. Some more pictures
