@@ -1,0 +1,28 @@
+<main>
+            <section id="home">
+                <h2>Welcome to my website!</h2>
+                <img src="profpic.jpg" alt="Picture of me" width="200" height="200">
+                <p>Hey! My name is Kristian and this is my first website!</p>
+            </section>
+            <section id="about">
+                <h2>About me</h2>
+                <p>
+                    I am a computer science student at UAlbany. My goal is to become a backend developer
+                    and work on large scale web applications. First, I thought I should learn a little bit of frontend, so here I am!
+                </p>
+                <img src="Albany-Great-Danes-Logo.png" alt="UAlbany Great Danes Logo" width="300" height="200">
+                <p>Go Great Danes!</p>
+                <h3>My favorite hobbies</h3>
+                <ul>
+                    <li>Programming</li>
+                    <li>Rock climbing</li>
+                    <li>Snowboarding</li>
+                    <li>Chess</li>
+                    <li>Rewatching my favorite movies</li>
+                    <li>Spending more money than I should</li>
+                    <li>Learning!</li>
+                </ul>
+                <p>My favorite website is my GitHub, check it out!</p>
+                <a href="https://github.com/KTokos" target="_blank">Kristian's GitHub</a>
+            </section>
+        </main>
