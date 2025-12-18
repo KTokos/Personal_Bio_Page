@@ -186,3 +186,32 @@ nav a:hover {
     font-size: 1.2rem;
     padding-top: 1rem;
 }
+
+/* This is where the projects page styles will go */
+
+.projects_page h1 {
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+    font-weight: 550;
+}
+
+.projects_page .projects_list ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+    gap: 3rem;
+    padding: rem;
+}
+
+.projects_page .projects_list ul a { 
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.projects_page .projects_list ul a:hover {
+    color: var(--transition_color);
+}
