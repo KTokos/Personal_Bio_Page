@@ -89,6 +89,7 @@ nav a:hover {
 .about_me .header ul {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
     list-style: none;
     padding: 5rem;
 }
