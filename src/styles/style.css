@@ -1,4 +1,3 @@
-
 :root {
     --primary: #ffffff;
     --bg: #E2852E;
@@ -17,16 +16,21 @@
 body {
     background: var(--bg);
     color: var(--text);
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
 }
 
+/* --- NAVIGATION --- */
 nav {
     position: sticky;
     top: 0;
     background: var(--bg);
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    /* Mobile: Stack logo and links vertically */
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
     box-shadow: 0rem 0.2rem 0rem rgb(255, 255, 255);
     z-index: 10;
 }
@@ -40,6 +44,8 @@ nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+    justify-content: center;
 }
 
 nav a {
@@ -54,10 +60,12 @@ nav a:hover {
     color: var(--transition_color);
 }
 
+/* --- INTRO SECTION --- */
 .intro h1 {
     text-align: center;
-    padding: 5rem;
-    font-size: 3rem;
+    /* Mobile: Reduced padding */
+    padding: 2rem 1rem;
+    font-size: 2rem; /* Mobile: Smaller font */
     font-weight: 550;
 }
 
@@ -66,6 +74,9 @@ nav a:hover {
     margin: auto;
     border-radius: 50%;
     border: 0.5rem solid var(--primary);
+    /* Mobile: Ensure image doesn't overflow */
+    max-width: 80%;
+    height: auto;
 }
 
 .intro a {
@@ -85,21 +96,23 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* This is where the about me page styles will go */
+/* --- ABOUT ME PAGE --- */
 
 .about_me .header ul {
     display: flex;
-    flex-direction: row-reverse;
+    /* Mobile: Column layout */
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     list-style: none;
-    padding: 5rem;
+    padding: 2rem 1rem;
+    gap: 1rem;
 }
 
 .about_me .header ul h1 {
     text-align: center;
-    padding: 1.5rem 3rem; 
-    padding-right: 12rem;
-    font-size: 3rem;
+    padding: 1rem; 
+    font-size: 2rem; /* Mobile font size */
     font-weight: 550;
 }
 
@@ -108,83 +121,65 @@ nav a:hover {
     margin: auto;
     border-radius: 50%;
     border: 0.2rem solid var(--primary);
+    max-width: 150px; /* Control size on mobile */
+    height: auto;
 }
 
 .about_me .header h3 {
     text-align: center;
-    padding: 2rem 3rem; 
-    font-size: 1.5rem;
+    padding: 1rem; 
+    font-size: 1.2rem;
     font-weight: 550;
 }
 
+/* Shared styles for lists to reduce redundancy */
 .about_me .lists ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column; /* Mobile: Column */
+    align-items: center;
     list-style: none;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
-.about_me .lists .list_one {
-    justify-content: left;
-    display: block;
-    width: 15rem;
-    height: 20rem;
-    margin: 3rem;
-    border: 0.1rem solid var(--primary);
-    background: var(--bg);
-    box-shadow: 0rem 0rem 0rem 0.2rem var(--primary);
-    border-radius: 2rem;
-    text-align: center;
-    font-weight: 550;
-}
-
-.about_me .lists .list_one h2 {
-    font-size: 1.5rem;
-    padding-top: 1rem;
-}
-
-.about_me .lists .list_one ul {
-    display: flex;
-    flex-direction: column;
-    list-style: inside;
-    gap: 1rem;
-}
-
-.about_me .lists .list_one ul li {
-    font-size: 1.2rem;
-    padding-top: 1rem;
-}
-
+.about_me .lists .list_one,
 .about_me .lists .list_two {
-    justify-content: left;
     display: block;
-    width: 15rem;
-    height: 20rem;
-    margin: 3rem;
+    /* Mobile: responsive width */
+    width: 90%;
+    max-width: 20rem; 
+    /* Remove fixed height so content can grow */
+    min-height: 20rem; 
+    height: auto;
+    margin: 0 auto;
     border: 0.1rem solid var(--primary);
     background: var(--bg);
     box-shadow: 0rem 0rem 0rem 0.2rem var(--primary);
     border-radius: 2rem;
     text-align: center;
     font-weight: 550;
+    padding: 1rem;
 }
 
+.about_me .lists .list_one h2,
 .about_me .lists .list_two h2 {
     font-size: 1.5rem;
     padding-top: 1rem;
 }
 
+.about_me .lists .list_one ul,
 .about_me .lists .list_two ul {
     display: flex;
     flex-direction: column;
-    list-style: inside;;
+    list-style: inside;
     gap: 1rem;
+    padding: 0;
 }
 
+.about_me .lists .list_one ul li,
 .about_me .lists .list_two ul li {
-    font-size: 1.2rem;
-    padding-top: 1rem;
+    font-size: 1.1rem;
+    padding-top: 0.5rem;
 }
 
 .about_me hr {
@@ -200,11 +195,13 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 .about_me .pictures img {
-    width: 300px;
+    /* Mobile: Responsive Image */
+    width: 100%;
+    max-width: 300px;
     height: auto;
     display: block;
     margin: 2rem auto;
@@ -212,29 +209,29 @@ nav a:hover {
     border: 0.2rem solid var(--primary);
 }
 
-/* This is where the projects page styles will go */
-
+/* --- PROJECTS PAGE --- */
 .projects_page h1 {
     text-align: center;
-    padding: 5rem;
-    font-size: 3rem;
+    padding: 2rem 1rem;
+    font-size: 2rem;
     font-weight: 550;
 }
 
-.projects_page .projects_list ul{
+.projects_page .projects_list ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
     text-align: center;
-    gap: 3rem;
-    padding: rem;
+    gap: 2rem;
+    padding: 1rem;
 }
 
 .projects_page .projects_list ul a { 
     text-decoration: none;
     color: var(--text);
     transition: 0.3s;
+    font-size: 1.2rem;
 }
 
 .projects_page .projects_list ul a:hover {
@@ -247,4 +244,75 @@ nav a:hover {
     list-style: inside;
     gap: 1rem;
     padding-top: 1rem;
+}
+
+
+/* =========================================
+   DESKTOP / TABLET OVERRIDES (Min-width 768px)
+   This scales the design up for larger screens
+   ========================================= */
+
+@media (min-width: 768px) {
+    /* --- Nav Desktop --- */
+    nav {
+        flex-direction: row; /* Switch back to row */
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    /* --- Intro Desktop --- */
+    .intro h1 {
+        padding: 5rem;
+        font-size: 3rem;
+    }
+
+    /* --- About Me Desktop --- */
+    .about_me .header ul {
+        flex-direction: row-reverse; /* Restore row-reverse */
+        padding: 5rem;
+    }
+
+    .about_me .header ul h1 {
+        padding: 1.5rem 3rem; 
+        padding-right: 12rem;
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .about_me .header ul img {
+        margin: 0;
+        max-width: none; /* Reset max-width restriction */
+    }
+
+    .about_me .header h3 {
+        padding: 2rem 3rem; 
+        font-size: 1.5rem;
+    }
+
+    .about_me .lists ul {
+        flex-direction: row; /* Lists side by side */
+    }
+
+    .about_me .lists .list_one,
+    .about_me .lists .list_two {
+        width: 15rem;
+        height: 20rem; /* Fixed height returns on desktop */
+        margin: 3rem;
+    }
+    
+    .about_me .lists .list_one ul li,
+    .about_me .lists .list_two ul li {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+    }
+
+    /* --- Projects Desktop --- */
+    .projects_page h1 {
+        padding: 5rem;
+        font-size: 3rem;
+    }
+    
+    .projects_page .projects_list ul {
+        gap: 3rem;
+    }
 }
