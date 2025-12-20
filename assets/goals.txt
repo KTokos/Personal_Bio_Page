@@ -10,3 +10,9 @@ About me section:
 3. Passion/Goals
 4. Hobbies
 5. Some more pictures
+
+Projects page:
+
+1. Add some more projects
+2. Make it more readable
+3. Add some pictures of results
