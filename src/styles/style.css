@@ -147,7 +147,7 @@ nav a:hover {
 .about_me .lists .list_one ul {
     display: flex;
     flex-direction: column;
-    list-style: inside;;
+    list-style: inside;
     gap: 1rem;
 }
 
@@ -185,6 +185,31 @@ nav a:hover {
 .about_me .lists .list_two ul li {
     font-size: 1.2rem;
     padding-top: 1rem;
+}
+
+.about_me hr {
+    border: none;
+    height: 0.2rem;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+.about_me .pictures {
+    background-image: url("../../assets/skateboardFountain.jpg");
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 1rem;
+}
+
+.about_me .pictures img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--primary);
 }
 
 /* This is where the projects page styles will go */
