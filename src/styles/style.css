@@ -135,7 +135,8 @@ nav a:hover {
 /* Shared styles for lists to reduce redundancy */
 .about_me .lists ul {
     display: flex;
-    flex-direction: column; /* Mobile: Column */
+    flex-direction: row; /* Mobile: Column */
+    justify-content: center;
     align-items: center;
     list-style: none;
     gap: 2rem;
