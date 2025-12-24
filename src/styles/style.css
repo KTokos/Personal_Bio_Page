@@ -213,9 +213,16 @@ nav a:hover {
 /* --- PROJECTS PAGE --- */
 .projects_page h1 {
     text-align: center;
-    padding: 2rem 1rem;
+    padding-top: 2rem;
     font-size: 2rem;
     font-weight: 550;
+}
+
+.projects_page p {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
 }
 
 .projects_page .projects_list ul {
@@ -228,11 +235,21 @@ nav a:hover {
     padding: 1rem;
 }
 
+.projects_page .projects_list hr {
+    border: solid var(--primary);
+    border-radius: 15px;
+    align-self: center;
+    height: 0.2rem;
+    background-color: var(--primary);
+    width: 80%;
+}
+
 .projects_page .projects_list ul a { 
     text-decoration: none;
     color: var(--text);
     transition: 0.3s;
     font-size: 1.2rem;
+    font-weight: 550;
 }
 
 .projects_page .projects_list ul a:hover {
@@ -310,7 +327,7 @@ nav a:hover {
 
     /* --- Projects Desktop --- */
     .projects_page h1 {
-        padding: 5rem;
+        padding-top: 5rem;
         font-size: 3rem;
     }
     
