@@ -291,6 +291,7 @@ nav a:hover {
 
     .about_me .lists ul {
         flex-direction: row; /* Lists side by side */
+        justify-content: center;
     }
 
     .about_me .lists .list_one,
