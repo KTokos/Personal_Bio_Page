@@ -3,6 +3,9 @@
     --bg: #E2852E;
     --text: #ffffff;
     --transition_color: #ffb380;
+    --switch-on: #4cd964;
+    --switch-off: #ffffff;
+    --thumb-color: #acacac;
     --radius: 16px;
 }
 
@@ -13,16 +16,18 @@
     font-family: "Poppins", sans-serif;
 }
 
-body.dark_mode {
+body.dark-mode {
     --primary: #000000;
     --bg: #1a1a1a;
     --text: #f0f0f0;
     --transition_color: #666666;
+    --switch-on: #007aff;
+    --switch-off: #444;
     --radius: 16px;
 }
 
 body {
-    background: var(--bg);
+    background-color: var(--bg);
     color: var(--text);
     /* Prevent horizontal scroll on mobile */
     overflow-x: hidden;
@@ -94,7 +99,7 @@ nav a:hover {
     padding: 0.75rem 2rem;
     font-size: 1rem;
     border: none;
-    background: #E2852E;
+    background: var(--bg);
     box-shadow: 0rem 0rem 0rem 0.2rem var(--primary);
     color: rgb(255, 255, 255);
     border-radius: var(--radius);
@@ -102,6 +107,58 @@ nav a:hover {
     text-align: center;
     font-weight: 550;
     transition: 0.3s;
+}
+
+/* Toggle switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;;
+}
+
+/* Hide the actual checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The Slider Track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-off);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* The Sliding Circle (Thumb) */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--thumb-color);
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Change color when active */
+input:checked + .slider {
+  background-color: var(--switch-on);
+}
+
+/* Move the circle when active */
+input:checked + .slider:before {
+  transform: translateX(26px);
 }
 
 /* --- ABOUT ME PAGE --- */
