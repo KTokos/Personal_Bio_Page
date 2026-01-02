@@ -111,10 +111,12 @@ nav a:hover {
 
 /* Toggle switch container */
 .switch {
-    position: relative;
-    display: inline-block;
+    position: sticky;
+    top: 1rem;
     width: 60px;
-    height: 34px;;
+    height: 34px;
+    display: block;
+    margin: 0 auto; /* Center horizontally */
 }
 
 /* Hide the actual checkbox */
