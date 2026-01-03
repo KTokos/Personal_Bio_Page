@@ -7,6 +7,8 @@
     --switch-off: #ffffff;
     --thumb-color: #acacac;
     --radius: 16px;
+    /* New variable to handle card backgrounds specifically */
+    --card-bg: #E2852E;
 }
 
 * {
@@ -24,6 +26,8 @@ body.dark-mode {
     --switch-on: #007aff;
     --switch-off: #444;
     --radius: 16px;
+    /* Darker grey for cards to stand out against the black bg */
+    --card-bg: #2a2a2a;
 }
 
 body {
@@ -31,6 +35,7 @@ body {
     color: var(--text);
     /* Prevent horizontal scroll on mobile */
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* --- NAVIGATION --- */
@@ -46,11 +51,13 @@ nav {
     gap: 1rem;
     box-shadow: 0rem 0.2rem 0rem rgb(255, 255, 255);
     z-index: 10;
+    transition: background-color 0.3s ease;
 }
 
 nav h2 {
     font-size: 1.5rem;
     font-weight: 550;
+    color: var(--text);
 }
 
 nav ul {
@@ -80,6 +87,7 @@ nav a:hover {
     padding: 2rem 1rem;
     font-size: 2rem; /* Mobile: Smaller font */
     font-weight: 550;
+    color: var(--text);
 }
 
 .intro img {
@@ -101,7 +109,7 @@ nav a:hover {
     border: none;
     background: var(--bg);
     box-shadow: 0rem 0rem 0rem 0.2rem var(--primary);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /* Keep white text for buttons usually */
     border-radius: var(--radius);
     text-decoration: none;
     text-align: center;
@@ -174,6 +182,7 @@ input:checked + .slider:before {
     list-style: none;
     padding: 2rem 1rem;
     gap: 1rem;
+    color: var(--text); /* UPDATED */
 }
 
 .about_me .header ul h1 {
@@ -197,6 +206,7 @@ input:checked + .slider:before {
     padding: 1rem; 
     font-size: 1.2rem;
     font-weight: 550;
+    color: var(--text);
 }
 
 /* Shared styles for lists to reduce redundancy */
@@ -221,18 +231,24 @@ input:checked + .slider:before {
     height: auto;
     margin: 0 auto;
     border: 0.1rem solid var(--primary);
-    background: var(--bg);
+    
+    /* UPDATED: Use card-bg and explicit text color */
+    background: var(--card-bg);
+    color: var(--text);
+    
     box-shadow: 0rem 0rem 0rem 0.2rem var(--primary);
     border-radius: 2rem;
     text-align: center;
     font-weight: 550;
     padding: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .about_me .lists .list_one h2,
 .about_me .lists .list_two h2 {
     font-size: 1.5rem;
     padding-top: 1rem;
+    color: var(--text);
 }
 
 .about_me .lists .list_one ul,
@@ -248,6 +264,7 @@ input:checked + .slider:before {
 .about_me .lists .list_two ul li {
     font-size: 1.1rem;
     padding-top: 0.5rem;
+    color: var(--text); /* UPDATED */
 }
 
 .about_me hr {
@@ -262,7 +279,7 @@ input:checked + .slider:before {
     height: auto;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: white; /* Always white on image */
     padding: 2rem 1rem;
 }
 
@@ -283,6 +300,7 @@ input:checked + .slider:before {
     padding-top: 2rem;
     font-size: 2rem;
     font-weight: 550;
+    color: var(--text); /* UPDATED */
 }
 
 .projects_page p {
@@ -291,6 +309,7 @@ input:checked + .slider:before {
     font-size: 1rem;
     font-weight: 500;
     padding-bottom: 1rem;
+    color: var(--text); /* UPDATED */
 }
 
 .projects_page .projects_list ul {
@@ -314,7 +333,7 @@ input:checked + .slider:before {
 
 .projects_page .projects_list ul a { 
     text-decoration: none;
-    color: var(--text);
+    color: var(--text); /* UPDATED */
     transition: 0.3s;
     font-size: 1.2rem;
     font-weight: 550;
@@ -330,6 +349,7 @@ input:checked + .slider:before {
     list-style: inside;
     gap: 1rem;
     padding-top: 1rem;
+    color: var(--text); /* UPDATED */
 }
 
 
